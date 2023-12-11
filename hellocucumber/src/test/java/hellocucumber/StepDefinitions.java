@@ -8,24 +8,12 @@ import org.junit.jupiter.api.Assertions.*;
 
 public class StepDefinitions {
 
-    @Given("an example scenario")
-    public void anExampleScenario() {
-    }
-
-    @When("all step definitions are implemented")
-    public void allStepDefinitionsAreImplemented() {
-    }
-
-    @Then("the scenario passes")
-    public void theScenarioPasses() {
-    }
-
     String today;
     String actualAnswer;
 
-    @Given("today is Sunday")
-    public void today_is_sunday() {
-        today = "Sunday";
+    @Given("today is {string}")
+    public void today_is_sunday(String day) {
+        today = day;
     }
 
     @When("I ask if it's Friday")
@@ -34,18 +22,8 @@ public class StepDefinitions {
     }
 
     @Then("It should tell {string}")
-    public void i_should_tell(String string) {
-            assertEquals(string, actualAnswer);
-    }
-
-    @Given("today is Friday")
-    public void today_is_friday() {
-        today = "Friday";
-    }
-
-    @Given("today is anything else!")
-    public void today_is_anything_else() {
-        today = "anything else";
+    public void i_should_tell(String answer) {
+            assertEquals(answer, actualAnswer);
     }
 }
 
@@ -54,6 +32,6 @@ class IsItFriday {
         if (today.equals("Friday")) {
             return "TGIF";
         }   
-        return "no";
+        return "Nope";
     }
 }
