@@ -3,21 +3,32 @@
 :icons: font
 :MoSCoW: https://fr.wikipedia.org/wiki/M%C3%A9thode_MoSCoW[MoSCoW]
 
-Ce dépôt concerne les rendus de mailto:A_changer@etu.univ-tlse2.fr[Jonh Doe].
+Ce dépôt concerne les rendus de mailto:matthieu.robert@etu.univ-tlse2.fr[Matthieu Robert].
 
 == TP1
 
-.Exemple de code
-[source,java]
+.Contenu du fichier [is_it_friday_yet.feature]
+[source,feature]
 ---
-@Given("today is Sunday")
-public void today_is_sunday() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
+Feature: Is it friday yet
+
+  Scenario: Sunday isn't Friday 
+    Given today is Sunday
+    When I ask if it's Friday
+    Then It should tell "no"
+
+  Scenario: Friday is Friday
+    Given today is Friday
+    When I ask if it's Friday
+    Then It should tell "TGIF"
+
+  Scenario: anything else! isn't Friday 
+    Given today is anything else!
+    When I ask if it's Friday
+    Then It should tell "no"
 ---
 
-.Exemple d'image insérée en asciidoc
-image::artifacts-r303.svg[width=80%]
+.Résultat d'execution des test
+image::TP1_test_result.png[width=80%]
 
 == TP2...
