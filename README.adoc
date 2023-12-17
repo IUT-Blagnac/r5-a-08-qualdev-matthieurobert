@@ -174,3 +174,11 @@ func TestFeatures(t *testing.T) {
 
 .Résultat d'execution des test
 image::TP3_test_result.png[width=80%]
+
+== TP4
+
+.Résultat du rapport généré avec Serenity pour hellocucumber
+
+Liens : https://htmlpreview.github.io/?https://github.com/IUT-Blagnac/r5-a-08-qualdev-matthieurobert/blog/main/hellocucumber/serenity/index/html
+
+image::TP4_test_result.png[width=80%]
